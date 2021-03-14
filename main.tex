@@ -1,0 +1,266 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.2, 11 February 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Linh Hoang Duc}
+\tagline{Associate Software Engineer}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Linh}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{hdlinh1808@email.com}
+  \phone{035-892-4393} \\
+  \mailaddress{783 Tran Xuan Soan Street, Tan Hung Ward, Dictrict 7, Ho Chi Minh City}
+%   \location{Location, COUNTRY}
+%   \homepage{www.homepage.com/}
+%   \twitter{@twitterhandle}
+%   \linkedin{linkedin.com/in/yourid}
+%   \github{github.com/yourid}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.55}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Associate Software Engineer}{Zalo group}{July 2019 -- Ongoing}{Ho Chi Minh City}
+\begin{itemize}
+\item Work as a backend engineer, develop some modules and toolkits.
+\item Researching and implementing new technologies to improve system performance
+\end{itemize}
+
+\divider
+
+\cvevent{Software Development Collaborator}{Zalo group}{March 2018 -- June 2019}{Ho Chi Minh City}
+\begin{itemize}
+\item Research about relevant technicals, develop some toolkits.
+\end{itemize}
+
+\divider
+
+\cvevent{Bachelor Engineer in Computer Science}{Ho Chi Minh University of Technology}{Sep 2015 -- Nov 2019}{Ho Chi Minh City}
+\begin{itemize}
+\item Study and research.
+\item GPA: 8,56. Degree Classification: Very Good.
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{Graduate Thesis}{Ho Chi Minh University of Technology}{Sep 2018 - Jun 2019}{Ho Chi Minh City}
+\begin{itemize}
+    \item Thesis title: Multi-relational association rule mining from transaction dataset.
+    \item Grade: 9,8.
+\end{itemize}
+
+\divider
+
+\cvevent{Assignments}{Ho Chi Minh University of Technology}{2016 -2019}{Ho Chi Minh City}
+\begin{itemize}
+\item Build android application to share location together (Computer
+Network Assignment)
+\item Build a game similar Boom game base on Unity (Object Oriented
+Programming Assignment)
+\item Build a hospital management system using Java and Oracle database
+(Database System Assignment)
+\item Implement MiniC program language using Scala (Principle of
+Programing Language Assignment)
+\end{itemize}
+\newpage
+
+\cvsection{Activity}
+
+\cvevent{Deputy Secretary of the Ho Chi Minh Communist Youth Union}{Ho Chi Minh University of Technology}{Sep 2016 - Nov 2019}{Ho Chi Minh City}
+Supported the class’ monitor in organizing events and activities
+
+\divider
+
+\cvevent{Voluntary Admissions Consultant}{Ho Chi Minh University of Technology}{Spring 2017}{Ho Chi Minh City}
+Made posts on Facebook to promote admissions; came back to Tran Quoc Tuan High School in Kon TumProvince and gave advise
+
+\medskip
+
+% \cvsection{A Day of My Life}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+
+
+\cvsection{Relevant Textbook Studying}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``Stay hungry, stay foolish''
+\end{quote}
+
+\cvsection{Objective}
+
+\cvachievement{\faTrophy}{To become an accomplished, high performance software engineer}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Logic Thinking}\\
+\cvtag{Responsibility}
+
+\divider\smallskip
+
+\cvtag{C++} \\
+\cvtag{Java}
+\cvtag{Spring MVC}\\
+\cvtag{HTML}
+\cvtag{CSS}
+\cvtag{Java script}
+
+\cvsection{Languages}
+
+% \cvskill{English}{}
+
+\textbf{English:    TOEIC 865 (taken Aug. 2018)}
+% \divider
+
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vpsace etc to make ajustments.
+\medskip
+
+\cvsection{Education}
+
+\cvevent{BE CS, Honors Program}{Ho Chi Minh University of Technology}{Sep 2015 -- Nov 2019}{}
+
+\divider
+
+\cvevent{}{Tran Quoc Tuan High School}{Sep 2012 -- May 2015}{}
+
+\divider
+
+\cvevent{}{Chu Van An Secondary School}{Sep 2008 -- May 2012}{}
+
+\divider
+
+\cvevent{}{Kim Dong Primary School}{Sep 2003 -- May 2008}{}
+
+% \divider
+
+\cvsection{Hobbies}
+\cvtag{Math}
+\cvtag{Algorithm}
+\cvtag{Book}
+\cvtag{Game}
+\newpage
+\cvsection{Scholarship/Prizes}
+
+\cvevent{Comprehensively Excellent Student}{Ho Chi Minh University of Technology}{2016 - 2019}{Ho Chi Minh City}
+
+\divider
+
+
+\cvevent{Promoting scholarship}{Ho Chi Minh University of Technology}{2015 - 2019}{Ho Chi Minh City}
+5 / 8 semester
+\end{paracol}
+
+
+\end{document}
